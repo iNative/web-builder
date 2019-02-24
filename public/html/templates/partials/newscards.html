@@ -1,0 +1,50 @@
+	    <div class="cards"> 
+			<div class="container"> 
+				<div class="title"> <h2> Notizie</h2> </div>
+
+ 			   <div class="row"> 
+				   <div class="card-columns col-md-12"> 
+					   {% for post in posts %}
+
+ 					  		{% for tag in post.tags %}
+
+ 						   		{% if tag.name=="notizie" %}
+
+ 							   		<div class="card {% if post.feature_image %} card-blog {% endif %} {% if post.featured == true %} {{['bg-primary', 'bg-s3'] | random}} {% endif %}">
+
+ 									   {% if post.feature_image %} 
+									   <div class="card-header card-header-image"> <a href="#"> <img class="img" src="{{post.feature_image}}"></a> </div> 
+									   {% endif %}
+
+ 									<div class="card-body"> 
+										<h5 class="card-category text-success">
+											{% for _tag in post.tags %}
+
+ 										   		{% if _tag.name != "notizie" %} {% if _tag.name != "articolo" %}
+
+ 											   		{{_tag.name}}
+
+ 												{% endif %}
+
+ 											 	{% if _tag.name == "articolo" %}
+
+ 											  		<i class="fa fa-newspaper-o"></i>
+
+ 												{% endif %} {% endif %}
+
+ 											{% endfor %}
+										</h5>
+										<h6>{{ post.published_at | date("MM DD YYYY") }}</h6>
+
+ 									   <h4 class="card-title"> <a href="#">{{post.title}}</a> </h4> 
+									   <p class="card-description"> {{post.html | safe }} </p> 
+								   </div>
+							   </div>
+
+ 							  {% endif %}
+						{% endfor %} 
+					{% endfor %} 
+				</div>
+			</div>
+		</div>
+	</div>
