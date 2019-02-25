@@ -1,51 +1,72 @@
 					const GhostContentAPI = require('@tryghost/content-api');
 
-					const api = new GhostContentAPI({
-						host: 'http://localhost:8080',
-						key: 'b2ac88884788a2bd493f2c55c9',
-						version: 'v2'
+					const api 			= new GhostContentAPI({
+												//GHOST API CREDENTIALS AND SERVER URL
+												host: 'http://139.162.193.141',
+												key: '2233dbac4d04bd8c0d83e0f2ca',
+												version: 'v2'
+											});
+
+					var gulp         	= require('gulp');
+
+					var data 			= require('gulp-data');
+
+					var path         	= require('path');
+
+					var sass         	= require('gulp-sass');
+
+					var autoprefixer 	= require('gulp-autoprefixer');
+
+					var sourcemaps  	= require('gulp-sourcemaps');
+
+					var connect      	= require('gulp-connect');
+
+					var open         	= require('gulp-open');
+
+					var nunjucksRender 	= require('gulp-nunjucks-render');
+
+					var dateFilter 		= require('nunjucks-date-filter');
+					
+					const jsonfile = require('jsonfile')
+
+					var JSONdata		={"posts":[]};
+
+					var Paths 			= {
+											HERE                 : './',
+											DIST                 : 'dist/',
+											CSS                  : './assets/css/',
+											SCSS_TOOLKIT_SOURCES : './assets/scss/material-kit.scss',
+											SCSS                 : './assets/scss/**/**'
+										};
+
+
+
+
+					gulp.task('get_posts', function() {
+						
+					api.posts
+					    .browse({ include: 'tags'})
+					    .then((posts) => {
+					        posts.forEach((post) => {
+								JSONdata.posts.push(post);
+					            
+					        });
+							
+							jsonfile.writeFile('./assets/mdata.json', JSONdata, function (err) {
+							  if (err) console.error(err)
+							})
+							
+							// write file
+					    })
+					    .catch((err) => {
+					        console.error(err);
+					    });
 					});
-
-					var gulp         = require('gulp');
-
-					var data = require('gulp-data');
-
-					var path         = require('path');
-
-					var sass         = require('gulp-sass');
-
-					var autoprefixer = require('gulp-autoprefixer');
-
-					var sourcemaps   = require('gulp-sourcemaps');
-
-					var connect      = require('gulp-connect');
-
-					var open         = require('gulp-open');
-
-					var nunjucksRender = require('gulp-nunjucks-render');
-
-					var dateFilter = require('nunjucks-date-filter');
-
-					var manageEnvironment = function(environment) {
-						environment.addFilter('date', dateFilter);
-					}
-
-					var JSONdata={"posts":[]};
-
-					var Paths = {
-						HERE                 : './',
-						DIST                 : 'dist/',
-						CSS                  : './assets/css/',
-						SCSS_TOOLKIT_SOURCES : './assets/scss/material-kit.scss',
-						SCSS                 : './assets/scss/**/**'
-					};
-
-
-
-
-					gulp.task('createjson', function() {
+					
+					gulp.task('get_pages', function() {
 					});
-
+					
+					
 
 					gulp.task('nunjucks', function() {
 	
@@ -58,7 +79,9 @@
 						// Renders template with nunjucks
 						.pipe(nunjucksRender({
 							path: ['html/templates'],
-							manageEnv: manageEnvironment
+							manageEnv: function(environment) {
+								environment.addFilter('date', dateFilter);
+							},
 						}))
 						// output files in app folder
 						.pipe(gulp.dest('html'))
