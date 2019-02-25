@@ -1,8 +1,5 @@
-# Thank you for purchasing Material Kit PRO <3
+# Sicurtransport.com Front-end code
 
-## Docs and Examples
-
-Please check the official documentation in `docs/documentation.html` or directly to this link: http://demos.creative-tim.com/marketplace/material-kit-pro/docs/2.0/getting-started/introduction.html
 
 ## Getting Started
 
