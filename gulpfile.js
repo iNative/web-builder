@@ -29,7 +29,7 @@
 					
 					const jsonfile = require('jsonfile')
 
-					var JSONdata		={"posts":[]};
+					var JSONdata		={"posts":[],"pages":[]};
 
 					var Paths 			= {
 											HERE                 : './',
@@ -42,7 +42,7 @@
 
 
 
-					gulp.task('get_posts', function() {
+					gulp.task('get_data', function() {
 						
 					api.posts
 					    .browse({ include: 'tags'})
@@ -52,9 +52,23 @@
 					            
 					        });
 							
-							jsonfile.writeFile('./assets/mdata.json', JSONdata, function (err) {
-							  if (err) console.error(err)
-							})
+						api.pages
+						    .browse({ include: 'tags'})
+						    .then((pages) => {
+						        pages.forEach((page) => {
+									JSONdata.pages.push(page);
+					            
+						        });
+							
+								jsonfile.writeFile('./assets/mdata.json', JSONdata, function (err) {
+								  if (err) console.error(err)
+								})
+							
+								// write file
+						    })
+						    .catch((err) => {
+						        console.error(err);
+						    });
 							
 							// write file
 					    })
@@ -63,8 +77,7 @@
 					    });
 					});
 					
-					gulp.task('get_pages', function() {
-					});
+					
 					
 					
 
