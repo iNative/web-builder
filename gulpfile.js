@@ -42,8 +42,9 @@
 
 
 
-					gulp.task('get_data', function() {
+					gulp.task('build', function() {
 						
+					//load posts to JSONdata
 					api.posts
 					    .browse({ include: 'tags'})
 					    .then((posts) => {
@@ -52,6 +53,8 @@
 					            
 					        });
 							
+						//load pages to JSONdata
+							
 						api.pages
 						    .browse({ include: 'tags'})
 						    .then((pages) => {
@@ -59,12 +62,31 @@
 									JSONdata.pages.push(page);
 					            
 						        });
+								
+								// write JSONfile
 							
 								jsonfile.writeFile('./assets/mdata.json', JSONdata, function (err) {
 								  if (err) console.error(err)
 								})
+								
+								//nunjucks tasks
+								// Gets .html and .nunjucks files in pages
+								return gulp.src('html/pages/**/*.+(html|nunjucks)')
+								// adds data 
+								.pipe(data(function() {
+									return require('./assets/mdata.json')
+								}))
+								// Renders template with nunjucks
+								.pipe(nunjucksRender({
+									path: ['html/templates'],
+									manageEnv: function(environment) {
+										environment.addFilter('date', dateFilter);
+									},
+								}))
+								// output files in app folder
+								.pipe(gulp.dest('html'))
 							
-								// write file
+								
 						    })
 						    .catch((err) => {
 						        console.error(err);
@@ -81,26 +103,7 @@
 					
 					
 
-					gulp.task('nunjucks', function() {
-	
-						// Gets .html and .nunjucks files in pages
-						return gulp.src('html/pages/**/*.+(html|nunjucks)')
-						// adds data 
-						.pipe(data(function() {
-							return require('./assets/mdata.json')
-						}))
-						// Renders template with nunjucks
-						.pipe(nunjucksRender({
-							path: ['html/templates'],
-							manageEnv: function(environment) {
-								environment.addFilter('date', dateFilter);
-							},
-						}))
-						// output files in app folder
-						.pipe(gulp.dest('html'))
-	
-					});
-
+					
 					/* SASS */
 
 
