@@ -84,7 +84,7 @@
 									},
 								}))
 								// output files in app folder
-								.pipe(gulp.dest('html'))
+								.pipe(gulp.dest('dist'))
 							
 								
 						    })
@@ -138,5 +138,5 @@
 
 					gulp.task('default', ['server', 'watch'], function () {
 						gulp.src(__filename)
-						.pipe(open({uri: 'http://localhost:9001/html'}));
+						.pipe(open({uri: 'http://localhost:9001/dist'}));
 					});
