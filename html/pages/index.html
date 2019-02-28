@@ -6,9 +6,9 @@
 {{body.class('home')}}
 
 {% include "partials/nav.html" %}
-	  
+
   <div class="header-3 offer-header">
-      
+
       <!-- Carousel Card -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -22,17 +22,12 @@
                       <div class="container">
                           <div class="row">
                               <div class="col-md-8 ml-auto mr-auto  text-center">
-								 
+
                                   <h1 class="title  "><i class="icon-vigilanza"></i>
                                 Casa Sicura</h1>
-								 
+
                                   <h2><small>La tua casa è finalmente al sicuro con il kit antintrusione direttamente collegato 24H alla centrale operativa.</small></h2>
-								<!-- {{ getContext() | dump| safe }}
-								AA {{context}}
-								
-									
-									-->
-                                
+
                                   <div class="buttons pt-4 d-none d-sm-none ">
                                       <a href="product.html" class="btn btn-success btn-lg 	d-none d-sm-block mt-4"" >
                                         A partire da &euro; 1.50 al giorno
@@ -40,8 +35,8 @@
                                       <a href="product.html" class="btn btn-success btn 	d-block d-sm-none mt-4" >
                                         da &euro; 1.50 al giorno
                                       </a>
-                                     
-                                     
+
+
                                   </div>
                               </div>
                           </div>
@@ -55,8 +50,8 @@
                               <div class="col-md-8 ml-auto mr-auto text-center">
                                   <h1 class="title"><i class="icon-valori"></i> S3 Cash</h1>
                                   <h2><small>Il sistema consente il versamento delle somme in loco e l'accredito automatico nel c/c entro 24H.  </small></h2>
-                                
-                                  
+
+
                                   <div class="buttons pt-4 d-none d-sm-none">
                                       <a href="pricing.html" class="btn btn-s5 btn-lg d-none d-sm-block mt-4"">
                                           <i class="material-icons">format_align_left</i> Approfondisci
@@ -76,11 +71,11 @@
                           <div class="row">
                               <div class="col-md-8 ml-auto mr-auto  text-center">
                                   <h1 class="title"><i class=" icon-valori"></i> Trasporto Valori</h1>
-								  
+
                                   <h2><small>Tutti i trasporti ed i valori custoditi sono assicurati con polizza stipulata con i Lloyd's di Londra.</small></h2>
-                                 
+
                                   <div class="buttons pt-4 d-none d-sm-none">
-                                     
+
                                       <a href="signup-page.html" class="btn btn-success btn-lg d-none d-sm-block mt-4"">
                                           <i class="material-icons">shopping_cart</i> Richiedi il Servizio
                                       </a>
@@ -106,26 +101,26 @@
       <!-- End Carousel Card -->
   </div>
   <!--     *********    END HEADER 3      *********      -->
-	
-	
+
+
 	<div class="main main-raised">
         <div class="container">
             <!--     *********    PROJECTS 1     *********      -->
 			 {% include "partials/servizi.html" %}
-            
+
             <!--     *********    END PROJECTS 1      *********      -->
-            
-           
-          
+
+
+
 			 {% include "partials/clienticolor.html" %}
-		
-		
-			
+
+
+
         </div>
 		<br/><br/>
 			{% include "partials/newscards.html" %}
-        
-	 
+
+
 	 	<br/><br/>
     </div>
 {% endblock %}
