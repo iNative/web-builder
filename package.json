@@ -7,10 +7,10 @@
   "license": "Creative Tim License <www.creative-tim.com/license>",
   "private": true,
   "scripts": {
-      "compile:scss": "gulp compile:scss",
-      "gulp:watch": "gulp watch",
-      "start": "npm run build && gulp",
-      "build": "gulp build"
+    "compile:scss": "gulp compile:scss",
+    "gulp:watch": "gulp watch",
+    "start": "npm run build && gulp",
+    "build": "gulp build"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
