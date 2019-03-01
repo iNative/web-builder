@@ -48,7 +48,7 @@ gulp.task('build', function() {
     //load posts to JSONdata
     api.posts
         .browse({
-            include: 'tags'
+            include: 'tags', limit:'all'
         })
         .then((posts) => {
             //console.log(posts)
