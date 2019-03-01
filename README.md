@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-We've also included an optional Gulp file to help you get started with theme customization. You'll need to install Node.js and Gulp before using our included gulpfile.js.
+We've also included a  Gulp file to help you get started with theme customization. You'll need to install Node.js and Gulp before using our included gulpfile.js.
 
 1. Download the project's zip
 2. Make sure you have node.js (https://nodejs.org/en/) installed
