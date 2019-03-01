@@ -37,9 +37,9 @@ var JSONdata = {
 var Paths = {
     HERE: './',
     DIST: 'dist/',
-    CSS: './assets/css/',
-    SCSS_TOOLKIT_SOURCES: './assets/scss/material-kit.scss',
-    SCSS: './assets/scss/**/**'
+    CSS: './dist/assets/css/',
+    SCSS_TOOLKIT_SOURCES: './dist/assets/scss/material-kit.scss',
+    SCSS: './dist/assets/scss/**/**'
 };
 
 
@@ -119,7 +119,7 @@ gulp.task('watch', function() {
     gulp.watch(Paths.SCSS, ['compile:scss']);
     gulp.watch('html/**/*.+(html|nunjucks)', ['build']);
     gulp.watch('html/**/**/*.+(html|nunjucks)', ['build']);
-    gulp.watch('assets/data.json', ['build']);
+    
 });
 
 
