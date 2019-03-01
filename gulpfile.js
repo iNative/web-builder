@@ -51,7 +51,7 @@ gulp.task('build', function() {
             include: 'tags'
         })
         .then((posts) => {
-            console.log(posts)
+            //console.log(posts)
             posts.forEach((post) => {
                 JSONdata.posts.push(post);
             });
@@ -62,6 +62,8 @@ gulp.task('build', function() {
                     include: 'tags'
                 })
                 .then((pages) => {
+                	
+                	
                     pages.forEach((page) => {
                         JSONdata.pages.push(page);
                     });
@@ -115,9 +117,9 @@ gulp.task('compile:scss', function() {
 /* END SASS */
 gulp.task('watch', function() {
     gulp.watch(Paths.SCSS, ['compile:scss']);
-    gulp.watch('html/**/*.+(html|nunjucks)', ['nunjucks']);
-    gulp.watch('html/**/**/*.+(html|nunjucks)', ['nunjucks']);
-    gulp.watch('assets/data.json', ['nunjucks']);
+    gulp.watch('html/**/*.+(html|nunjucks)', ['build']);
+    gulp.watch('html/**/**/*.+(html|nunjucks)', ['build']);
+    gulp.watch('assets/data.json', ['build']);
 });
 
 

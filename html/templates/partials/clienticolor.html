@@ -4,33 +4,29 @@
 							<h2 class="title">Ci hanno scelto:</h2>
 				
 						</div>
+						
+												
+											
+											 
+ 						   		
                        <div class="row">
-                           <div class="col-md-2 client zara">
-                              
-                           </div>
+                       	
+                       	{% for post in posts %}
+											 		{% for tag in post.tags %}
+											 	
+											 				{% if tag.name=="ci hanno scelto" %}
+											 				<div class="col-md-2 client" style="background-image:url('{{post.feature_image}}')"></div>
+                           		{% endif  %}
+											 		{% endfor %}
+											 		
+											 {% endfor  %}
 						
-                           <div class="col-md-2 client pittarosso">
-                              
-                           </div>
-						
-                           <div class="col-md-2 client unicredit">
-                              
-                           </div>
-						
-                           <div class="col-md-2 client cariparma">
-                              
-                           </div>
-						
-                           <div class="col-md-2 client esselunga">
-                              
-                           </div>
-						
-                           <div class="col-md-2 client fincantieri">
-                              
-                           </div>
+                          
                           
 					   
 					   
                        </div>
+                       
+                       
                     </div>
                 </div>
