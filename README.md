@@ -3,6 +3,10 @@
 
 ## Getting Started
 
+Static Website generator that uses plain .html files for templates and '{{mustache}}' notation for dynamic data.
+Data can be pulled from json file or from any api.
+Ghost api are installed by default.
+
 We've also included a  Gulp file to help you get started with theme customization. You'll need to install Node.js and Gulp before using our included gulpfile.js.
 
 1. Download the project's zip
