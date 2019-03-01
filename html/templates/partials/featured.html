@@ -20,7 +20,22 @@
 		                            <div class="row">
 		                                <div class="col-md-8 ml-auto mr-auto  text-center">
 
-		                                    <h1 class="title  "><i class="icon-vigilanza"></i>
+		                                    <h1 class="title  ">
+												{% for icon in page.tags %}
+													{% if icon.name=="vigilanza" %}
+													<i class="icon-vigilanza"></i>
+													{% endif  %}
+													
+													{% if icon.name=="valori" %}
+													<i class="icon-valori"></i>
+													{% endif  %}
+													
+													{% if icon.name=="cyber" %}
+													<i class="icon-cyber"></i>
+													{% endif  %}
+													
+													
+												{% endfor %}
 		                                  {{page.title}}</h1>
 
 		                                    <h2><small>{{page.excerpt}}</small></h2>
