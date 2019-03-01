@@ -38,8 +38,8 @@ var Paths = {
     HERE: './',
     DIST: 'dist/',
     CSS: './dist/assets/css/',
-    SCSS_TOOLKIT_SOURCES: './dist/assets/scss/material-kit.scss',
-    SCSS: './dist/assets/scss/**/**'
+    SCSS_TOOLKIT_SOURCES: './scss/material-kit.scss',
+    SCSS: './scss/**/**'
 };
 
 
@@ -69,7 +69,7 @@ gulp.task('build', function() {
                     });
 
                     // write JSONfile
-                    jsonfile.writeFile('./assets/mdata.json', JSONdata, function(err) {
+                    jsonfile.writeFile('./mdata.json', JSONdata, function(err) {
                         if (err) console.error(err)
                     })
 
@@ -78,7 +78,7 @@ gulp.task('build', function() {
                     return gulp.src('html/pages/**/*.+(html|nunjucks)')
                         // adds data
                         .pipe(data(function() {
-                            return require('./assets/mdata.json')
+                            return require('./mdata.json')
                         }))
                         // Renders template with nunjucks
                         .pipe(nunjucksRender({
