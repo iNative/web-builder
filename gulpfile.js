@@ -127,13 +127,14 @@ gulp.task('server', function() {
     connect.server({
         host: "0.0.0.0",
         port: 9001,
-        livereload: true
+        livereload: true,
+		root:"dist"
     });
 });
 
 gulp.task('default', ['server', 'watch'], function() {
     gulp.src(__filename)
         .pipe(open({
-            uri: 'http://localhost:9001/dist'
+            uri: 'http://localhost:9001/'
         }));
 });
