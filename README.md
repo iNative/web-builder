@@ -2,7 +2,7 @@
 
 
 ## Getting Started
-Olon is a gulp script that helps you build html sites recycling as much html mark up as posssible or needed, populating it with dynamic data if needed, and deployed to netlify. 
+Olon is a gulp script that helps you build html sites recycling as much html mark up as possible or needed, populating it with dynamic data if needed, and deploy it to netlify. 
 
 Olon uses plain .html files, so you can start off with whatever you like, really a empty file or brand new template. 
 Put everything in the 'dist' folder.
