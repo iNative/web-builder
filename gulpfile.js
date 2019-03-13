@@ -2,7 +2,7 @@ const GhostContentAPI = require('@tryghost/content-api');
 
 const api = new GhostContentAPI({
     //GHOST API CREDENTIALS AND SERVER URL
-    host: 'https://cms.sicurtransport.com',
+    url: 'https://cms.sicurtransport.com',
     key: '2233dbac4d04bd8c0d83e0f2ca',
     version: 'v2'
 });
