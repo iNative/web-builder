@@ -583,7 +583,8 @@ background-color: rgba(0,0,0,0.4);
     }
 }
 .header-s3{
-background-image: url("../img/bgs3.jpg");}
+background-image: url("../img/bgs3.jpg");
+background-position-y: 60px !important;}
 .blog-post{
     .page-header{
         height: 33vh;
