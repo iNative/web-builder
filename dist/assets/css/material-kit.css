@@ -11699,7 +11699,7 @@ textarea {
     border-radius: 0; }
   .navbar .navbar-nav .nav-item .mininav-link {
     position: relative;
-    color: #6F7F8B;
+    color: rgba(0, 0, 0, 0.3);
     padding: 0.9375rem;
     font-weight: 800;
     font-size: 0.9em;
@@ -11778,12 +11778,14 @@ textarea {
         -ms-flex-align: center;
             align-items: center; }
   .navbar .navbar-brand {
-    width: 200px;
+    width: 250px;
     position: relative;
     color: inherit;
-    height: 93px;
+    height: 50px;
     font-size: 1.125rem;
     padding: 0.625rem 0; }
+  .navbar .navbar-translate {
+    height: 50px; }
   .navbar .navbar-brand.white {
     background: url("/assets/img/logo-w.png");
     background-size: 98%;

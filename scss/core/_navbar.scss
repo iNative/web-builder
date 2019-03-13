@@ -20,7 +20,7 @@
 .navbar-nav{
 		.nav-item .mininav-link{
         position: relative;
-        color: $sicur4;
+        color: rgba(0,0,0,0.3);
         padding: $padding-general-x;
         font-weight: 800 ;
         font-size: 0.9em ;
@@ -139,16 +139,17 @@
 
     // give correct size to ripple container
     .navbar-brand {
-                    width:200px; 
+                    width:250px; 
 					
 					
         position: relative;
         color: inherit;
-        height: 93px;
+        height: 50px;
         font-size: $navbar-brand-font-size - 0.125;
         //line-height: 30px;
         padding: $padding-general-y 0;
     }
+	 .navbar-translate {height :50px } // should match line 147 
 	 .navbar-brand.white{
 	background:url('/assets/img/logo-w.png');
 	background-size:98%;
