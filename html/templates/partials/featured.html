@@ -15,12 +15,12 @@
 					{% for tag in page.tags %}
 						{% if tag.name=="servizi" %}
 		                <div class="carousel-item {% if a==0 %} active {% endif %} ">
-		                    <div class="page-header header-filter"  style="background-image: url('{{page.feature_image}}');">
+		                    <div class="page-header header-filter" filter-color="white"  style="background-image: url('{{page.feature_image}}');">
 		                        <div class="container">
 		                            <div class="row">
-		                                <div class="col-md-8 ml-auto mr-auto  text-center">
+		                                <div class="col-md-6 text-left">
 
-		                                    <h2 class="title  ">
+		                                    <h2 class="title text-default ">
 												{% for icon in page.tags %}
 													{% if icon.name=="vigilanza" %}
 													<i class="icon-vigilanza"></i>
@@ -38,10 +38,10 @@
 												{% endfor %}
 		                                  {{page.title}}</h2>
 
-		                                    <p class="title" style="font-weight:100">{{page.excerpt}}</p>
+		                                    <p class="title text-default" style="font-weight:500">{{page.excerpt}}</p>
 
 		                                    <div class="buttons pt-4 ">
-		                                        <a href="product.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 33%;margin: auto;" >
+		                                        <a href="product.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 66%;" >
 		                                         Continua
 		                                        </a>
 		                                        <a href="product.html" class="btn btn-success btn 	d-block d-sm-none mt-4"  style="width: 66%;margin: auto;">

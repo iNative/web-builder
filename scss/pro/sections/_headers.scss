@@ -30,7 +30,11 @@
             @include linear-gradient(rgba($sicur4,.56), rgba($sicur4,.95));
         }
     }
-	
+    &[filter-color="white"] {
+        &:after{
+            @include linear-gradient(rgba($white,.76), rgba($white,.26));
+        }
+    }
     
 	
     &[filter-color="green"],

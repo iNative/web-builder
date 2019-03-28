@@ -12407,6 +12407,9 @@ h5.description, h4.description {
 .text-gray {
   color: #999999 !important; }
 
+.text-default {
+  color: #3C4858 !important; }
+
 .space {
   height: 130px;
   display: block; }
@@ -16834,6 +16837,15 @@ select.selectpicker {
   /* For Opera 11.1 to 12.0 */
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(60deg, rgba(111, 127, 139, 0.56), rgba(111, 127, 139, 0.95));
+  /* Standard syntax */ }
+
+.header-filter[filter-color="white"]:after {
+  background: rgba(255, 255, 255, 0.76);
+  /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.26));
   /* Standard syntax */ }
 
 .header-filter[filter-color="green"]:after, .header-filter[filter-color="success"]:after {
