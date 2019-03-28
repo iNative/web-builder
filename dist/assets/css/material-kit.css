@@ -17560,6 +17560,8 @@ footer .brand {
     top: 7%; }
   .presentation-page .section-components .coloured-card-btn-img {
     top: -2%; }
+  h2.title {
+    font-size: 1.7em; }
   .presentation-page #cd-vertical-nav,
   .index-page #cd-vertical-nav,
   .section-page #cd-vertical-nav {
@@ -17572,6 +17574,10 @@ footer .brand {
     top: 90px !important;
     right: 30px !important; }
   .cd-vertical-nav {
-    display: none !important; } }
+    display: none !important; }
+  h2.title {
+    font-size: 1.5em; }
+  p.title {
+    line-height: 1.8em; } }
 
 /*# sourceMappingURL=material-kit.css.map */
