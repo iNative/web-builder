@@ -278,6 +278,14 @@
   .cd-vertical-nav{
     display: none !important;
   }
-  h2.title{font-size:1.5em}
-  p.title{line-height: 1.8em;}
+  h2.title{
+  	font-size:1.5em
+	}
+  p.title{
+  	line-height: 1.8em;
+	}
+  .card-columns{
+  	padding-left:0px !important;
+	padding-right:0px !important;
+	}
 }

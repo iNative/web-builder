@@ -17578,6 +17578,9 @@ footer .brand {
   h2.title {
     font-size: 1.5em; }
   p.title {
-    line-height: 1.8em; } }
+    line-height: 1.8em; }
+  .card-columns {
+    padding-left: 0px !important;
+    padding-right: 0px !important; } }
 
 /*# sourceMappingURL=material-kit.css.map */
