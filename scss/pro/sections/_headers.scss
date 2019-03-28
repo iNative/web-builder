@@ -32,7 +32,7 @@
     }
     &[filter-color="white"] {
         &:after{
-            @include linear-gradient(rgba($white,.76), rgba($white,.26));
+            @include linear-gradient(rgba($white,.86), rgba($white,.26));
         }
     }
     
