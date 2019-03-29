@@ -2,52 +2,35 @@
                         <div class="container mt-4">
                             <div class="content">
                                 <div class="row">
-                                    <div class="col-md-3 brand">
-                                        
-                                    </div>
-                                    <div class="col-md-3">
+                                    
+                                    <div class="col-md-4">
                                         <h5>Trasporto Valori </h5>
                                         <ul class="links-vertical">
-                                            <li>
-				                              <a href="#" class="dropdown-item">
-					                                  <i class="material-icons">local_shipping</i> Trasporto Valori
-					                              </a>
-					                          
-				                             
-				                              
-                                            </li>
-                                            <li>
-			                              <a href="#" class="dropdown-item">
-			                                  <i class="material-icons">local_atm</i> Gestione Atm Bancomat
-			                              </a>
-			                             
-			                              
-                                            </li>
-                                            <li>
-   			                              <a href="#" class="dropdown-item">
-   			                                  <i class="material-icons">list</i> Ritiro e Custodia
-   			                              </a>
-   			                             
-				                              
-                                            </li>
-                                            <li>
-	    			                              <a href="#" class="dropdown-item">
-	    			                                  <i class="material-icons">money</i> Contazione
-	    			                              </a>
-	    			                             
- 				                              
-                                            </li>
-                                            <li>
-   			                              <a href="#" class="dropdown-item">
-   			                                  <i class="material-icons">lock</i> MoneyInTransit
-   			                              </a>
-				                              
-                                            </li>
+											
+				   						 {% for page in pages %}
+						 	
+				   						  {% for tag in page.tags %}			
+
+				   						 {% if tag.name == "valori" %}
+                                         <li>
+											<a href="/{{page.slug}}.html"class="dropdown-item">
+												<i class="material-icons">{{page.codeinjection_head}}</i> {{page.title}}
+											</a>
+										</li>
+                            
+				   						 {% endif  %}
+                                           
+				   						 	{% endfor %}
+				   							{% endfor %}
+											
+											
+
+                                            
                                             
                                         </ul>
                                        
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <h5>Vigilanza</h5>
                                         <ul class="links-vertical">
                                             <li>
@@ -120,7 +103,7 @@
 											
                                         </ul>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <h5>Casseforti Intelligenti</h5>
                                         <ul class="links-vertical">
                                             <li>

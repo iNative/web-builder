@@ -16652,6 +16652,9 @@ select.selectpicker {
   .blog-posts .card-form-horizontal form .form-group .form-control {
     width: 100%; }
 
+.ghost-html h3 {
+  padding-top: 2em; }
+
 .contact-us .contact-content {
   padding-bottom: 40px;
   padding-top: 40px; }
