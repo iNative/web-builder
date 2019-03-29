@@ -662,8 +662,9 @@ blockquote {
         }
     }
 }
-.ghost-html h3 {
+.ghost-html h3, .ghost-html h2  {
 	padding-top:2em;
+	padding-bottom: 1em
 }
 .contact-us{
     .contact-content{
