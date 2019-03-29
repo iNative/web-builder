@@ -6,22 +6,114 @@
 {{body.class('about-us')}}
 
 {% include "partials/nav.html" %}
+<script>
+	(function(funcName, baseObj) {
+	    // The public function name defaults to window.docReady
+	    // but you can pass in your own object and own function name and those will be used
+	    // if you want to put them in a different namespace
+	    funcName = funcName || "docReady";
+	    baseObj = baseObj || window;
+	    var readyList = [];
+	    var readyFired = false;
+	    var readyEventHandlersInstalled = false;
 
+	    // call this when the document is ready
+	    // this function protects itself against being called more than once
+	    function ready() {
+	        if (!readyFired) {
+	            // this must be set to true before we start calling callbacks
+	            readyFired = true;
+	            for (var i = 0; i < readyList.length; i++) {
+	                // if a callback here happens to add new ready handlers,
+	                // the docReady() function will see that it already fired
+	                // and will schedule the callback to run right after
+	                // this event loop finishes so all handlers will still execute
+	                // in order and no new ones will be added to the readyList
+	                // while we are processing the list
+	                readyList[i].fn.call(window, readyList[i].ctx);
+	            }
+	            // allow any closures held by these functions to free
+	            readyList = [];
+	        }
+	    }
+
+	    function readyStateChange() {
+	        if ( document.readyState === "complete" ) {
+	            ready();
+	        }
+	    }
+
+	    // This is the one public interface
+	    // docReady(fn, context);
+	    // the context argument is optional - if present, it will be passed
+	    // as an argument to the callback
+	    baseObj[funcName] = function(callback, context) {
+	        if (typeof callback !== "function") {
+	            throw new TypeError("callback for docReady(fn) must be a function");
+	        }
+	        // if ready has already fired, then just schedule the callback
+	        // to fire asynchronously, but right away
+	        if (readyFired) {
+	            setTimeout(function() {callback(context);}, 1);
+	            return;
+	        } else {
+	            // add the function and context to the list
+	            readyList.push({fn: callback, ctx: context});
+	        }
+	        // if document already ready to go, schedule the ready function to run
+	        if (document.readyState === "complete") {
+	            setTimeout(ready, 1);
+	        } else if (!readyEventHandlersInstalled) {
+	            // otherwise if we don't have event handlers installed, install them
+	            if (document.addEventListener) {
+	                // first choice is DOMContentLoaded event
+	                document.addEventListener("DOMContentLoaded", ready, false);
+	                // backup is window load event
+	                window.addEventListener("load", ready, false);
+	            } else {
+	                // must be IE
+	                document.attachEvent("onreadystatechange", readyStateChange);
+	                window.attachEvent("onload", ready);
+	            }
+	            readyEventHandlersInstalled = true;
+	        }
+	    }
+	})("docReady", window);
+	
+	function getUrlParameter(name) {
+	    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+	    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+	    var results = regex.exec(location.search);
+	    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	};
+	
+	docReady(function() {
+		var el = document.getElementById("page-header"); 
+		var bg = getUrlParameter('bg');
+		el.setAttribute("style", "background-image:url("+bg+")"); 
+	});
+	
+	
+	
+
+	
+	
+</script>
 
 
 	  
- <div class="page-header header-filter header-small  " filter-color="primary"data-parallax="true" style="background-image: url({{page.feature_image}});">
+ <div id="page-header" class="page-header header-filter header-small  " filter-color="primary"data-parallax="true" >
      <div class="container ">
          <div class="row">
              <div class="col-md-8 ml-auto mr-auto text-center projects-1">
                   <h1 class="title">{{page.title}}</h2>
                       <h2 class="title">Richiedi come </h2>
-                      <ul class="nav nav-pills ">
+                      <ul class="nav nav-pills nav-pills-success">
                           <li class="nav-item">
-                              <a class="nav-link active" href="#pill1" data-toggle="tab">Privato</a>
+                              <a class="nav-link " href="#pill1" data-toggle="tab">Privato</a>
                           </li> 
                           <li class="nav-item">
-                              <a class="nav-link" href="#pill2" data-toggle="tab">Azienda</a>
+                              <a class="nav-link active" href="#pill2" data-toggle="tab">Azienda</a>
                           </li>
                           
                       </ul>
@@ -37,7 +129,7 @@
 	                         <div class="col-md-12 ml-auto mr-auto text-center ">
 	                             
 	                             <div class="tab-content tab-space text-left">
-	                                 <div class="tab-pane active show" id="pill1">
+	                                 <div class="tab-pane " id="pill1">
 										 <div class="pt-5">
 										                 <div class="container">
 										                     <div class="row">
@@ -98,8 +190,9 @@
 																					     <option value="2">Foobar</option>
 																					     <option value="3">Is great</option>
 																					 </select>
-										                                             <span class="material-input"></span>
-										                                         </div>
+										                                            
+																					<span class="material-input"></span>
+																				</div>
 										                                         <div class="form-group label-floating is-empty bmd-form-group">
 										                                             <label for="exampleMessage1" class="bmd-label-floating">Messaggio opzionale</label>
 										                                             <textarea name="message" class="form-control" id="exampleMessage1" rows="6"></textarea>
@@ -124,7 +217,7 @@
 										                 </div>
 										             </div>
 	                                 </div>
-	                                 <div class="tab-pane" id="pill2">
+	                                 <div class="tab-pane active show" id="pill2">
 										 <div class="pt-5">
 										                 <div class="container">
 										                     <div class="row">
@@ -174,8 +267,7 @@
 										                                             <label class="bmd-label-floating"></label>
 																					 <select class="selectpicker " data-style="select-with-transition" title="Tipo di Azienda" data-size="7">
 																					    
-																					     <option value="Istituto di Credito">Istituto di Credito </option>
-																					     <option value="GDO">G.D.O.</option>
+																					    								     <option value="GDO">G.D.O.</option>
 																						  <option value="Esercizio Commerciale">Esercizio Commerciale</option>
 																						   <option value="Tabacchi">Tabacchi</option>
 																						    <option value="Farmacia">Farmacia.</option>
