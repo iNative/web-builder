@@ -15029,6 +15029,10 @@ thead.thead-inverse th,
   .card-profile .rotating-card-container .front {
     text-align: left; }
 
+.kg-gallery-image img {
+  width: 100% !important;
+  height: auto !important; }
+
 /*       Fix bug for IE      */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rotating-card-container .card .front,
