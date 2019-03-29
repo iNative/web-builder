@@ -1,0 +1,43 @@
+<!-- index.html -->
+{% extends "default.html" %}
+
+{% block content %}
+{% import 'macro/bodyClass.html' as body %}
+{{body.class('about-us')}}
+
+{% include "partials/nav.html" %}
+{% for page in pages %}			
+
+{% if page.slug == "strategic-risk-consulting" %}
+
+
+	  
+ <div class="page-header header-filter header-small  " filter-color="primary"data-parallax="true" style="background-image: url({{page.feature_image}});">
+     <div class="container ">
+         <div class="row">
+             <div class="col-md-8 ml-auto mr-auto text-center">
+                 <h1 class="title">{{page.title}}</h2>
+                 
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="main main-raised ">
+	 <div class="container">
+		 <div class=" section section-text">
+			 <div class="">
+				 <div class="row">
+					 <div class="col-md-8 ml-auto mr-auto text-left ghost-html">
+						 {{page.html | safe}}
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+
+{% endif  %}
+
+	{% endfor %}
+{% endblock %}
+
