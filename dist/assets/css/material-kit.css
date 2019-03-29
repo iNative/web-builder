@@ -11790,12 +11790,12 @@ textarea {
     height: 75px; }
   .navbar .navbar-brand.white {
     background: url("/assets/img/logo-w.png");
-    background-size: 98%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position-y: center; }
   .navbar .navbar-brand.primary {
     background: url("/assets/img/logo-p.png");
-    background-size: 98%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position-y: center; }
   .navbar > .container {
