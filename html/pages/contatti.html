@@ -14,7 +14,7 @@
         <div class="container ">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h2 class="title">Contatti</h2>
+                    <h1 class="title">Contatti</h1>
                  
                 </div>
             </div>
@@ -22,11 +22,12 @@
     </div>
     <div class="main main-raised">
         <div class="contact-content">
+			
             <div class="container">
                 
-                <div class="row">
-                    <div class="col-md-6 pt-5">
-						<h3 class="title pt-3">Scrivici</h3>
+                <div class="row pb-5">
+                    <div class="col-md-6 ml-auto pt-5">
+						<h2 class="title pt-3">Scrivici</h2>
                         <p class="description">Utilizza il modulo per inviarci un messaggio, rispondiamo in 24h.
                             <br>
                             <br>
@@ -50,11 +51,11 @@
                                 <textarea class="form-control" rows="6" id="message"></textarea>
                             </div>
                             <div class="submit text-center">
-                                <input type="submit" class="btn btn-primary btn-raised btn-round" value="Invia">
+                                <input type="submit" class="btn btn-primary btn-raised btn-round w-50" value="Invia">
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-4 ml-auto">
+                    <div class="col-md-4 mr-auto">
                         <div class="info info-horizontal">
                             <div class="icon icon-primary">
                                 <i class="material-icons">pin_drop</i>
@@ -75,7 +76,7 @@
                             <div class="description">
                                 <h4 class="info-title">Telefono</h4>
                                 <p> +39 091 6399111
-									<br/>Fax +39 091 6371898
+									<br/><i class="material-icons">print</i> Fax +39 091 6371898
                                 </p>
                             </div>
                         </div>
@@ -94,6 +95,22 @@
                         </div>
                     </div>
                 </div>
+				<hr/>
+				<div class="row pt-5 pb-5">
+					  <div class="col-md-6 pt-5 mr-auto ml-auto ghost-html">
+					  	<h2 class="text-center"> Sedi </h2>
+						{% for post in posts %}			
+
+						{% if post.slug == "sedi" %}
+						{{post.html | safe}}
+
+						{% endif  %}
+
+							{% endfor %}
+                        
+						
+					  </div>
+				</div>
             </div>
         </div>
     </div>
