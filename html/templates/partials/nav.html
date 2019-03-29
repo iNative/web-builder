@@ -59,22 +59,22 @@
                             <!--  <i class=" icon-valori"></i> --> Trasporto Valori
                          </a>
                          <div class="dropdown-menu dropdown-with-icons">
-                             <a href="#" class="dropdown-item">
-                                 <i class="material-icons">local_shipping</i> Trasporto Valori
+							 
+							 {% for page in pages %}
+							 	
+							  {% for tag in page.tags %}			
+
+							 {% if tag.name == "valori" %}
+
+					
+                             <a href="/{{page.slug}}.html" class="dropdown-item">
+                                 <i class="material-icons">{{page.codeinjection_head}}</i> {{page.title}}
                              </a>
-                             <a hhref="#" class="dropdown-item">
-                                 <i class="material-icons">local_atm</i> Gestione Atm Bancomat
-                             </a>
-                             <a href="#" class="dropdown-item">
-                                 <i class="material-icons">list</i> Ritiro e Custodia
-                             </a>
-                             <a href="#" class="dropdown-item">
-                                 <i class="material-icons">money</i> Contazione
-                             </a>
-                             <a href="#" class="dropdown-item">
-                                 <i class="material-icons">lock</i> MoneyInTransit
-                             </a>
-                           
+                            
+						 {% endif  %}
+
+						 	{% endfor %}
+							{% endfor %}
 
 
                          </div>
