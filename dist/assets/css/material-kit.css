@@ -16748,6 +16748,9 @@ select.selectpicker {
   overflow: hidden;
   border-radius: 6px; }
 
+.ghost-html strong {
+  font-weight: 900; }
+
 .page-header {
   height: 100vh;
   background-position: center center;
