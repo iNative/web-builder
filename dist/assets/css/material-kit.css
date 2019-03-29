@@ -12116,6 +12116,9 @@ textarea {
   -webkit-box-shadow: 0 4px 5px 0 rgba(244, 67, 54, 0.14), 0 1px 10px 0 rgba(244, 67, 54, 0.12), 0 2px 4px -1px rgba(244, 67, 54, 0.2);
           box-shadow: 0 4px 5px 0 rgba(244, 67, 54, 0.14), 0 1px 10px 0 rgba(244, 67, 54, 0.12), 0 2px 4px -1px rgba(244, 67, 54, 0.2); }
 
+.projects-1 .nav-pills .nav-item .nav-link {
+  color: #fff !important; }
+
 .nav-pills:not(.flex-column) .nav-item + .nav-item:not(:first-child) {
   margin-left: 5px; }
 
@@ -12283,6 +12286,9 @@ h1, h2, h3, .h1, .h2, .h3 {
 h4, h5, h6, .h4, .h5, .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: "itc-avant-garde-gothic-pro", "Helvetica", "Arial", sans-serif; }
+
+form {
   font-family: "itc-avant-garde-gothic-pro", "Helvetica", "Arial", sans-serif; }
 
 @media screen and (max-width: 414px) {
