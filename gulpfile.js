@@ -59,7 +59,7 @@ gulp.task('build', function() {
             //load pages to JSONdata
             api.pages
                 .browse({
-                    include: 'tags'
+                    include: 'tags', limit:'all'
                 })
                 .then((pages) => {
                 	

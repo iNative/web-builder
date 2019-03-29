@@ -3,9 +3,27 @@
       <!-- Carousel Card -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			   {% set n = 0 %}
+           	{% for page in pages %}
+			{% if page.featured %}
+			
+				{% for tag in page.tags %}
+					{% if tag.name=="servizi" %}
+					{% if n==0 %}  <li class="active" data-target="#carouselExampleIndicators" data-slide-to="{{n}}"  ></li> 
+					
+					{% endif %}
+					
+					{% if n > 0 %} 
+					  <li data-target="#carouselExampleIndicators" data-slide-to="{{n}}" ></li>
+					  {% endif  %}
+					   {% set n = n +1 %}
+					   
+							{% endif  %}
+						{% endfor %}
+					
+					{% endif  %}	
+					{% endfor  %}
+              
           </ol>
           <div class="carousel-inner">
 			  {% set a = 0 %}
@@ -41,10 +59,10 @@
 		                                    <p class="title text-default" style="font-weight:500">{{page.excerpt}}</p>
 
 		                                    <div class="buttons pt-4 ">
-		                                        <a href="product.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 66%;" >
+		                                        <a href="{{page.slug}}.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 66%;" >
 		                                         Continua
 		                                        </a>
-		                                        <a href="product.html" class="btn btn-success btn 	d-block d-sm-none mt-4"  style="width: 66%;margin: auto;">
+		                                        <a href="{{page.slug}}.html" class="btn btn-success btn 	d-block d-sm-none mt-4"  style="width: 66%;margin: auto;">
 		                                          Continua
 		                                        </a>
 
@@ -55,7 +73,7 @@
 		                        </div>
 		                    </div>
 		                </div>
-						{% set a = 1%}
+						{% set a = a + 1%}
 						{% endif  %}
 					{% endfor %}
 					
