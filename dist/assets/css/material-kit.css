@@ -11780,24 +11780,24 @@ textarea {
         -ms-flex-align: center;
             align-items: center; }
   .navbar .navbar-brand {
-    width: 250px;
+    width: 300px;
     position: relative;
     color: inherit;
-    height: 50px;
+    height: 75px;
     font-size: 1.125rem;
     padding: 0.625rem 0; }
   .navbar .navbar-translate {
-    height: 50px; }
+    height: 75px; }
   .navbar .navbar-brand.white {
     background: url("/assets/img/logo-w.png");
     background-size: 98%;
     background-repeat: no-repeat;
-    background-position-y: bottom; }
+    background-position-y: center; }
   .navbar .navbar-brand.primary {
     background: url("/assets/img/logo-p.png");
     background-size: 98%;
     background-repeat: no-repeat;
-    background-position-y: bottom; }
+    background-position-y: center; }
   .navbar > .container {
     -webkit-box-flex: 1;
         -ms-flex: 1;

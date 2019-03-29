@@ -143,28 +143,28 @@
 
     // give correct size to ripple container
     .navbar-brand {
-                    width:250px; 
+                    width:300px; 
 					
 					
         position: relative;
         color: inherit;
-        height: 50px;
+        height: 75px;
         font-size: $navbar-brand-font-size - 0.125;
         //line-height: 30px;
         padding: $padding-general-y 0;
     }
-	 .navbar-translate {height :50px } // should match line 147 
+	 .navbar-translate {height :75px } // should match line 151 
 	 .navbar-brand.white{
 	background:url('/assets/img/logo-w.png');
 	background-size:98%;
 	background-repeat: no-repeat;
-	background-position-y:bottom;
+	background-position-y:center;
 	}
 	 .navbar-brand.primary{
 	background:url('/assets/img/logo-p.png');
 	background-size:98%;
 	background-repeat: no-repeat;
-	background-position-y:bottom;
+	background-position-y:center;
 	}
 
     > .container {
