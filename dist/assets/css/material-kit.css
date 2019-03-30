@@ -11259,15 +11259,18 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
   .bmd-form-group .form-control,
   .bmd-form-group label,
   .bmd-form-group input::-webkit-input-placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group .form-control,
   .bmd-form-group label,
   .bmd-form-group input::-ms-input-placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group .form-control,
   .bmd-form-group label,
   .bmd-form-group input::placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group label {
     color: #AAAAAA; }
   .bmd-form-group .radio label,
@@ -11312,15 +11315,18 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
   .bmd-form-group.bmd-form-group-sm .form-control,
   .bmd-form-group.bmd-form-group-sm label,
   .bmd-form-group.bmd-form-group-sm input::-webkit-input-placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group.bmd-form-group-sm .form-control,
   .bmd-form-group.bmd-form-group-sm label,
   .bmd-form-group.bmd-form-group-sm input::-ms-input-placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group.bmd-form-group-sm .form-control,
   .bmd-form-group.bmd-form-group-sm label,
   .bmd-form-group.bmd-form-group-sm input::placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group.bmd-form-group-sm label {
     color: #AAAAAA; }
   .bmd-form-group.bmd-form-group-sm .radio label,
@@ -11365,15 +11371,18 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
   .bmd-form-group.bmd-form-group-lg .form-control,
   .bmd-form-group.bmd-form-group-lg label,
   .bmd-form-group.bmd-form-group-lg input::-webkit-input-placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group.bmd-form-group-lg .form-control,
   .bmd-form-group.bmd-form-group-lg label,
   .bmd-form-group.bmd-form-group-lg input::-ms-input-placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group.bmd-form-group-lg .form-control,
   .bmd-form-group.bmd-form-group-lg label,
   .bmd-form-group.bmd-form-group-lg input::placeholder {
-    line-height: 1.1; }
+    line-height: 1.1;
+    font-weight: bold; }
   .bmd-form-group.bmd-form-group-lg label {
     color: #AAAAAA; }
   .bmd-form-group.bmd-form-group-lg .radio label,
@@ -11419,17 +11428,20 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
 .form-control,
 label,
 input::-webkit-input-placeholder {
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-weight: bold; }
 
 .form-control,
 label,
 input::-ms-input-placeholder {
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-weight: bold; }
 
 .form-control,
 label,
 input::placeholder {
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-weight: bold; }
 
 label {
   color: #AAAAAA; }
