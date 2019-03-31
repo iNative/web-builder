@@ -1,0 +1,39 @@
+<!-- index.html -->
+{% extends "default.html" %}
+
+{% block content %}
+{% import 'macro/bodyClass.html' as body %}
+{{body.class('about-us')}}
+
+{% include "partials/nav.html" %}
+
+
+	  
+ <div class="page-header header-filter header-small  " filter-color="primary"data-parallax="true" >
+     <div class="container ">
+         <div class="row">
+             <div class="col-md-8 ml-auto mr-auto text-center">
+                  <h1 class="title">Richiesta Ricevuta</h2>
+					
+                 
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="main main-raised ">
+	 <div class="container">
+		 <div class=" section section-text">
+			 <div class="">
+				 <div class="row">
+					 <div class="col-md-8 ml-auto mr-auto text-left ghost-html"><p>Gentile Utente,</p>
+						 <p>la vostra richiesta sarà subito esaminata e sarete contattati in giornata da un nostro addetto che fornirà tutte le informazioni e/o il preventivo di cui avete bisogno.</p>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+
+
+{% endblock %}
+
