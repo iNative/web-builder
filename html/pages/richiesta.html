@@ -95,6 +95,7 @@
 		
 		el.setAttribute("style", "background-image:url("+bg+")");
 		document.getElementById("service").value = service; 
+		document.getElementById("service_").value = service; 
 	});
 	
 	
@@ -157,7 +158,7 @@
 										                         <div class="col-md-5 ml-auto">
 										                             <div class="card card-contact">
 										                                 <form id="contact-form-privati" name="richiesta_servizio_privati" method="post" netlify action="/conferma">
-																			 <input type="hidden" name="servizio" id="service" value="">
+																			 <input type="hidden" name="servizio" id="service_" value="">
 										                                     <div class="card-header card-header-raised card-header-primary text-center">
 										                                         <h4 class="card-title">Compila il Modulo</h4>
 										                                     </div>
