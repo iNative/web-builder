@@ -156,7 +156,7 @@
 										                         </div>
 										                         <div class="col-md-5 ml-auto">
 										                             <div class="card card-contact">
-										                                 <form id="contact-form" method="post">
+										                                 <form id="contact-form" name="richiesta_servizio" method="post" netlify>
 										                                     <div class="card-header card-header-raised card-header-primary text-center">
 										                                         <h4 class="card-title">Compila il Modulo</h4>
 										                                     </div>
@@ -165,38 +165,294 @@
 										                                             <div class="col-md-6">
 										                                                 <div class="form-group label-floating is-empty bmd-form-group">
 										                                                     <label class="bmd-label-floating">Nome</label>
-										                                                     <input type="text" name="name" class="form-control">
+										                                                     <input type="text" name="nome" class="form-control" required="true" aria-required="true" aria-invalid="true">
 										                                                     <span class="material-input"></span>
 										                                                 </div>
 										                                             </div>
 										                                             <div class="col-md-6">
 										                                                 <div class="form-group label-floating is-empty bmd-form-group">
 										                                                     <label class="bmd-label-floating">Cognome</label>
-										                                                     <input type="text" name="name" class="form-control">
+										                                                     <input type="text" name="cognome" class="form-control" required="true" aria-required="true" aria-invalid="true">
 										                                                     <span class="material-input"></span>
 										                                                 </div>
 										                                             </div>
 										                                         </div>
 										                                         <div class="form-group label-floating is-empty bmd-form-group">
 										                                             <label class="bmd-label-floating">Email </label>
-										                                             <input type="email" name="email" class="form-control">
+										                                             <input type="email" name="email" class="form-control" required="true" aria-required="true" aria-invalid="true">
 										                                             <span class="material-input"></span>
 										                                         </div>
 										                                         <div class="form-group label-floating is-empty bmd-form-group">
 										                                             <label class="bmd-label-floating">Cellulare</label>
-										                                             <input type="email" name="email" class="form-control">
+										                                             <input type="text" name="email" class="form-control" required="true" aria-required="true" aria-invalid="true">
 										                                             <span class="material-input"></span>
 										                                         </div>
-										                                         <div class="form-group label-floating is-empty bmd-form-group">
-										                                             <label class="bmd-label-floating"></label>
-																					 <select class="selectpicker " data-style="select-with-transition" title="Dove richiede il servizio" data-size="7">
-																					   
-																					     <option value="2">Foobar</option>
-																					     <option value="3">Is great</option>
-																					 </select>
+	   										                                         <div class="form-group label-floating is-empty bmd-form-group">
+	   										                                             <label class="bmd-label-floating"></label>
+	   																					
+																						             <select name="regione" id="category1" class="selectpicker " data-style="select-with-transition"  data-size="7" required="true" aria-required="true" aria-invalid="true">
+																						     <option  value=''>Seleziona Regione</option>         
+																						   <option value='Abruzzo'>Abruzzo</option>
+																						   <option value='Basilicata'>Basilicata</option>
+																						   <option value='Calabria'>Calabria</option>
+																						   <option value='Campania'>Campania</option>
+																						   <option value='Emilia Romagna'>Emilia Romagna</option>
+																						   <option value='Friuli Venezia Giulia'>Friuli Venezia Giulia</option>
+																						   <option value='Lazio'>Lazio</option>
+																						   <option value='Liguria'>Liguria</option>
+																						   <option value='Lombardia'>Lombardia</option>
+																						   <option value='Marche'>Marche</option>
+																						   <option value='Molise'>Molise</option>
+																						   <option value='Piemonte'>Piemonte</option>
+																						   <option value='Puglia'>Puglia</option>
+																						   <option value='Sardegna'>Sardegna</option>
+																						   <option value='Sicilia'>Sicilia</option>
+																						   <option value='Toscana'>Toscana</option>
+																						   <option value='Trentino Alto Adige'>Trentino Alto Adige</option>
+																						   <option value='Umbria'>Umbria</option>
+																						   <option value="Valle d'Aosta'">Valle d'Aosta</option>
+																						   <option value='Veneto'>Veneto</option>
+																						             </select>
+																				             
+																						 
+																						 <span class="material-input"></span>
+	   										                                         </div>
 										                                            
-																					<span class="material-input"></span>
-																				</div>
+   										                                         <div class="form-group label-floating is-empty bmd-form-group">
+   										                                             <label class="bmd-label-floating"></label>
+																		             <select disabled="disabled" class="subcat " id="category2" name="provincia" required="true" aria-required="true" aria-invalid="true">
+																		             <option disabled value=''>Seleziona Provincia</option>    
+																		               <!-- Abruzzo -->
+																		               <optgroup data-rel="Abruzzo">
+         
+																		                <option value="Chieti">Chieti</option>
+																		                <option value="L\'Aquila">L\'Aquila</option>
+																		               <option value="Pescara">Pescara</option>
+																		                 <option value="Teramo">Teramo</option>
+																		               </optgroup>
+																		               <!-- Basilicata -->
+																		               <optgroup data-rel="Basilicata">
+         
+																		                <option value="Matera">Matera</option>
+																		                <option value="Potenza">Potenza</option>
+       
+																		               </optgroup>
+      
+																		              <!-- Basilicata -->
+																		               <optgroup data-rel="Calabria">
+         
+																		               <option value="Catanzaro">Catanzaro</option>
+																		           <option value="Cosenza">Cosenza</option>
+																		           <option value="Crotone">Crotone</option>
+																		           <option value="Reggio Calabria">Reggio Calabria</option>
+																		           <option value="Vibo Valentia">Vibo Valentia</option>
+       
+																		               </optgroup>
+      
+																		                <!-- Campania -->
+																		               <optgroup data-rel="Campania">
+																		               <option value="Avellino">Avellino</option>
+																		           <option value="Benevento">Benevento</option>
+																		           <option value="Caserta">Caserta</option>
+																		           <option value="Napoli">Napoli</option>
+																		           <option value="Salerno">Salerno</option>
+																		                   </optgroup>
+           
+																		                    <!-- Emilia Romagna -->
+																		               <optgroup data-rel="Emilia Romagna">
+																		              <option value="Bologna">Bologna</option>
+																		           <option value="Ferrara">Ferrara</option>
+																		           <option value="Forl&igrave;-Cesena">Forl&igrave;-Cesena</option>
+																		           <option value="Modena">Modena</option>
+																		           <option value="Parma">Parma</option>
+																		           <option value="Piacenza">Piacenza</option>
+																		           <option value="Ravenna">Ravenna</option>
+																		           <option value="Repubblica di San Marino">Repubblica di San Marino</option>
+																		           <option value="Rimini">Rimini</option>
+																		                   </optgroup>
+           
+																		                   <!-- Friuli Venezia Giulia -->
+																		               <optgroup data-rel="Friuli Venezia Giulia">
+																		              <option value="" selected>Seleziona</option>
+																		           <option value="Gorizia">Gorizia</option>
+																		           <option value="Pordenone">Pordenone</option>
+																		           <option value="Trieste">Trieste</option>
+																		           <option value="Udine">Udine</option>
+																		                   </optgroup>
+      
+																		               <!-- Lazio -->
+																		               <optgroup data-rel="Lazio">
+																		              <option value="Frosinone">Frosinone</option>
+																		           <option value="Latina">Latina</option>
+																		           <option value="Rieti">Rieti</option>
+																		           <option value="Roma">Roma</option>
+																		           <option value="Viterbo">Viterbo</option>
+   
+																		                   </optgroup>
+           
+																		                    <!-- Liguria -->
+																		               <optgroup data-rel="Liguria">
+																		              <option value="Frosinone">Frosinone</option>
+																		           <option value="" selected>Seleziona</option>
+																		           <option value="Genova">Genova</option>
+																		           <option value="Imperia">Imperia</option>
+																		           <option value="La Spezia">La Spezia</option>
+																		           <option value="Savona">Savona</option>
+   
+																		                   </optgroup>
+           
+																		                    <!-- Lombardia -->
+           
+																		               <optgroup data-rel="Lombardia">
+																		              <option value="Bergamo">Bergamo</option>
+																		           <option value="Brescia">Brescia</option>
+																		           <option value="Como">Como</option>
+																		           <option value="Cremona">Cremona</option>
+																		           <option value="Lecco">Lecco</option>
+																		           <option value="Lodi">Lodi</option>
+																		           <option value="Mantova">Mantova</option>
+																		           <option value="Milano">Milano</option>
+																		           <option value="Monza Brianza">Monza Brianza</option>
+																		           <option value="Pavia">Pavia</option>
+																		           <option value="Sondrio">Sondrio</option>
+																		           <option value="Varese">Varese</option>
+   
+																		                   </optgroup>    
+           
+    
+    
+    
+																		            <!-- Marche -->
+																		               <optgroup data-rel="Marche">
+																		             <option value="Ancona">Ancona</option>
+																		           <option value="Ascoli Piceno">Ascoli Piceno</option>
+																		           <option value="Macerata">Macerata</option>
+																		          <option value="Pesaro e Urbino">Pesaro e Urbino</option>
+   
+																		                   </optgroup>
+           
+           
+																		                    <!-- Molise -->
+																		               <optgroup data-rel="Molise">
+																		             <option value="Campobasso">Campobasso</option>
+  
+																		          <option value="Isernia">Isernia</option>
+
+   
+																		                   </optgroup>
+           
+           
+           
+																		            <!-- Piemonte -->
+																		               <optgroup data-rel="Piemonte">
+																		             <option value="Alessandria">Alessandria</option>
+																		           <option value="Asti">Asti</option>
+																		           <option value="Biella">Biella</option>
+																		           <option value="Cuneo">Cuneo</option>
+																		           <option value="Novara">Novara</option>
+																		           <option value="Torino">Torino</option>
+																		           <option value="Verb-Cus-Ossola">Verb-Cus-Ossola</option>
+																		           <option value="Vercelli">Vercelli</option>
+   
+																		                   </optgroup>
+           
+																		                   <!-- Puglia -->
+																		               <optgroup data-rel="Puglia">
+																		             <option value="Bari">Bari</option>
+																		           <option value="Barletta-Andria-Trani">Barletta-Andria-Trani</option>
+																		           <option value="Brindisi">Brindisi</option>
+																		           <option value="Foggia">Foggia</option>
+																		           <option value="Lecce">Lecce</option>
+																		           <option value="Taranto">Taranto</option>
+   
+																		                   </optgroup>
+           
+																		                   <!-- Sardegna -->
+																		               <optgroup data-rel="Sardegna">
+																		             <option value="Cagliari">Cagliari</option>
+																		           <option value="Nuoro">Nuoro</option>
+																		           <option value="Olbia-Tempio">Olbia-Tempio</option>
+																		           <option value="Oristano">Oristano</option>
+																		           <option value="Sassari">Sassari</option>
+   
+																		                   </optgroup>
+           
+																		                   <!-- Sicilia -->
+																		               <optgroup data-rel="Sicilia">
+  
+																		           <option value="Agrigento">Agrigento</option>
+																		           <option value="Caltanissetta">Caltanissetta</option>
+																		           <option value="Catania">Catania</option>
+																		           <option value="Enna">Enna</option>
+																		           <option value="Messina">Messina</option>
+																		           <option value="Palermo">Palermo</option>
+																		           <option value="Ragusa">Ragusa</option>
+																		           <option value="Siracusa">Siracusa</option>
+																		           <option value="Trapani">Trapani</option>
+   
+																		                   </optgroup>
+   
+   
+																		            <!-- Toscana -->
+																		               <optgroup data-rel="Toscana">
+  
+																		           <option value="Arezzo">Arezzo</option>
+																		          <option value="Firenze">Firenze</option>
+																		           <option value="Grosseto">Grosseto</option>
+																		           <option value="Livorno">Livorno</option>
+																		           <option value="Lucca">Lucca</option>
+																		           <option value="Massa Carrara">Massa Carrara</option>
+																		          <option value="Pisa">Pisa</option>
+																		         <option value="Pistoia">Pistoia</option>
+																		           <option value="Prato">Prato</option>
+																		           <option value="Siena">Siena</option>
+   
+																		                   </optgroup>
+           
+																		          <!-- Trentino Alto Adige -->
+																		               <optgroup data-rel="Trentino Alto Adige">
+    
+																		          <option value="Bolzano">Bolzano</option>
+																		           <option value="Trento">Trento</option>
+   
+																		                   </optgroup>       
+           
+  
+  
+																		          <!-- Umbria -->
+																		               <optgroup data-rel="Umbria">
+    
+																		         <option value="Perugia">Perugia</option>
+																		           <option value="Terni">Terni</option>
+   
+																		                   </optgroup>       
+           
+           
+																		          <!-- Valle d'Aosta -->
+																		               <optgroup data-rel="Valle d'Aosta">
+    
+																		         <option value="Aosta">Aosta</option>
+  
+   
+																		                   </optgroup>    
+  
+  
+																		           <!-- Veneto -->
+																		               <optgroup data-rel="Veneto">
+  
+																		          <option value="Belluno">Belluno</option>
+																		          <option value="Padova">Padova</option>
+																		          <option value="Rovigo">Rovigo</option>
+																		          <option value="Treviso">Treviso</option>
+																		           <option value="Venezia">Venezia</option>
+																		            <option value="Verona">Verona</option>
+																		          <option value="Vicenza">Vicenza</option>
+   
+																		                   </optgroup>
+           
+																		             </select>
+   										                                             <span class="material-input"></span>
+   										                                         </div>
 										                                         <div class="form-group label-floating is-empty bmd-form-group">
 										                                             <label for="exampleMessage1" class="bmd-label-floating">Messaggio opzionale</label>
 										                                             <textarea name="message" class="form-control" id="exampleMessage1" rows="6"></textarea>
@@ -204,7 +460,7 @@
 										                                         </div>
 										                                     </div>
 										                                     <div class="card-footer justify-content-between">
-										                                         <div class="form-check">
+										                                         <div class="form-check" style="visibility:hidden">
 										                                             <label class="form-check-label">
 										                                                 <input class="form-check-input" type="checkbox" value=""> I'm not a robot
 										                                                 <span class="form-check-sign">
@@ -235,8 +491,8 @@
 										                                 </div>
 										                                 <div class="description">
 										                                     <h4 class="info-title">Parliamone</h4>
-										                                     <p> Michael Jordan
-										                                         <br> +40 762 321 762
+										                                     <p> Nome Cognome
+										                                         <br> <tel>+39 091 321 762</tel>
 										                                         <br> Lun - Ven, 8:00-22:00
 										                                     </p>
 										                                 </div>
