@@ -148,6 +148,12 @@
         > .container-fluid {
           padding-right: 0;
           padding-left: 0;
+		  
+        }
+        .nav-link {
+          padding-right: $navbar-nav-link-padding-x;
+          padding-left: $navbar-nav-link-padding-x;
+		
         }
       }
 
@@ -170,6 +176,7 @@
           .nav-link {
             padding-right: $navbar-nav-link-padding-x;
             padding-left: $navbar-nav-link-padding-x;
+			
           }
         }
 

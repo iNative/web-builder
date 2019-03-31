@@ -3547,7 +3547,10 @@ tbody.collapse.show {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  .navbar-expand-sm .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; } }
 
 @media (min-width: 576px) {
   .navbar-expand-sm {
@@ -3591,7 +3594,10 @@ tbody.collapse.show {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  .navbar-expand-md .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; } }
 
 @media (min-width: 768px) {
   .navbar-expand-md {
@@ -3635,7 +3641,10 @@ tbody.collapse.show {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  .navbar-expand-lg .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; } }
 
 @media (min-width: 992px) {
   .navbar-expand-lg {
@@ -3679,7 +3688,10 @@ tbody.collapse.show {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  .navbar-expand-xl .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; } }
 
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -3731,6 +3743,9 @@ tbody.collapse.show {
   .navbar-expand > .container-fluid {
     padding-right: 0;
     padding-left: 0; }
+  .navbar-expand .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
   .navbar-expand .navbar-nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -11724,8 +11739,8 @@ textarea {
     position: relative;
     color: inherit;
     padding: 0.9375rem;
-    font-weight: 500;
-    font-size: 0.9em;
+    font-weight: 800;
+    font-size: 0.75em;
     text-transform: uppercase;
     border-radius: 3px;
     line-height: 20px; }
@@ -17537,13 +17552,15 @@ footer .brand {
   #navigation .navbar-collapse {
     display: none !important; } }
 
-@media all and (min-width: 991px) {
+@media all and (min-width: 1025px) {
   .navbar .navbar-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
     .navbar .navbar-nav .button-container {
-      margin-left: 0.1875px; } }
+      margin-left: 0.1875px; }
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.9em !important; } }
 
 @media screen and (max-width: 991px) {
   .presentation-page .section-components .components-macbook {

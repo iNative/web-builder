@@ -96,7 +96,7 @@
             @include transform-translate-x(-320px);
         }
     }
-
+          
     .navbar{
         .navbar-translate{
             width: 100%;
@@ -172,7 +172,7 @@
 
 }
 
-@media all and (min-width: 991px) {
+@media all and (min-width: 1025px) {
     .navbar .navbar-nav{
         align-items: center;
 
@@ -180,6 +180,16 @@
             margin-left: 0.1875px;
         }
     }
+	
+	
+	
+    .navbar-nav{
+        .nav-item .nav-link{
+            
+            font-size: 0.9em !important! ;
+			}
+		}
+	
 }
 
 @media screen and (max-width: 991px) {
