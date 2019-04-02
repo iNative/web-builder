@@ -107,9 +107,25 @@
                             <!-- <i class=" icon-valori"></i>   --> Casseforti Intelligenti
                          </a>
                          <div class="dropdown-menu dropdown-with-icons">
-                             <a href="/s3-cash.html" class="dropdown-item">
-                                 <i  class="icon-valori material-icons"></i> S3 CASH
-                             </a>
+							 
+								 {% for page in pages %}
+							 	
+								  {% for tag in page.tags %}			
+
+								 {% if tag.name == "Casseforti Intelligenti" %}
+
+					
+	                             <a href="/{{page.slug}}.html" class="dropdown-item">
+	                                 {{page.codeinjection_head | safe}} {{page.title}}
+	                             </a>
+                            
+							 {% endif  %}
+
+							 	{% endfor %}
+								{% endfor %}
+							 
+							 
+                           
                             
 
 
@@ -121,12 +137,21 @@
                          </a>
                          <div class="dropdown-menu dropdown-with-icons ">
 
-                             <a href="/cybersecurity.html" class="dropdown-item ">
-                                 <i class="material-icons">control_camera</i> DARKTRACE™
+							 {% for page in pages %}
+						 	
+							  {% for tag in page.tags %}			
+
+							 {% if tag.name == "cybersecurity" %}
+
+				
+                             <a href="/{{page.slug}}.html" class="dropdown-item">
+                                 {{page.codeinjection_head | safe}} {{page.title}}
                              </a>
-                             <a href="strategic-risk-consulting.html" class="dropdown-item">
-                                 <i  class="icon-cyber material-icons"></i> Strategic Risk Consulting
-                             </a>
+                          
+						 {% endif  %}
+
+						 	{% endfor %}
+							{% endfor %}
                              
                              
                          </div>
