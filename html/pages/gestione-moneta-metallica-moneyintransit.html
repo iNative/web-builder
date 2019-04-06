@@ -1,6 +1,49 @@
 <!-- index.html -->
 {% extends "default.html" %}
+{% block meta %}
+						{% for page in pages %}			
 
+						{% if page.slug == "gestione-moneta-metallica-moneyintransit" %}
+						<meta name="description" content="{{page.excerpt}}">
+						<meta name="author" content="Sicurtransport S.p.A.">
+						
+							
+								
+							
+								
+							
+						
+						
+						
+						<meta property="og:site_name" content="Sicurtransport.it">
+						    <meta property="og:type" content="website">
+						    <meta property="og:title" content="{{page.title}}">
+						    <meta property="og:description" content="{{page.excerpt}}">
+						    <meta property="og:url" content="https://www.sicurtransport.com/{{page.slug}}">
+						    <meta property="og:image" content="{{page.feature_image}}">
+							{% for tag in page.tags %}
+							<meta property="article:tag" content="{{tag.name}}">
+							{% endfor %}
+						    
+						   
+    
+						 
+						    <meta name="twitter:card" content="summary_large_image">
+						    <meta name="twitter:title" content="{{page.title}}">
+						    <meta name="twitter:description" content="{{page.excerpt}}">
+						    <meta name="twitter:url" content="https://www.sicurtransport.com/{{page.slug}}">
+						    <meta name="twitter:image" content="{{page.feature_image}}">
+						    
+					
+						  
+						
+						
+						{% endif  %}
+
+							{% endfor %}
+                        
+
+{% endblock %}
 {% block content %}
 {% import 'macro/bodyClass.html' as body %}
 {{body.class('about-us')}}

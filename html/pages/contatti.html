@@ -1,5 +1,18 @@
 <!-- index.html -->
 {% extends "default.html" %}
+{% block meta %}
+						{% for page in pages %}			
+
+						{% if page.slug == "contatti" %}
+						<meta name="description" content="{{page.excerpt}}">
+						
+
+						{% endif  %}
+
+							{% endfor %}
+                        
+
+{% endblock %}
 
 {% block content %}
 {% import 'macro/bodyClass.html' as body %}
