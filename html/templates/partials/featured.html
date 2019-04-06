@@ -80,52 +80,7 @@
 							{% endif  %}
 						{% endfor %}
 						
-							{% for type in page.tags %}
-							{% if type.name=="valori" %}
-		                <div class="carousel-item {% if a==0 %} active {% endif %} ">
-		                    <div class="page-header header-filter" filter-color="primary"  style="background-image: url('{{page.feature_image}}');">
-		                        <div class="container">
-		                            <div class="row">
-		                                <div class="col-md-6 text-left">
-
-		                                    <h2 class="title  ">
-												{% for icon in page.tags %}
-													{% if icon.name=="vigilanza" %}
-													<i class="icon-vigilanza"></i>
-													{% endif  %}
-													
-													{% if icon.name=="Casseforti Intelligenti" %}
-													<i class="icon-valori"></i>
-													{% endif  %}
-													
-													{% if icon.name=="cybersecurity" %}
-													<i class="icon-cyber"></i>
-													{% endif  %}
-													
-													
-												{% endfor %}
-		                                  {{page.title}}</h2>
-
-		                                    <p class="title " style="font-weight:500">{{page.excerpt}}</p>
-
-		                                    <div class="buttons pt-4 ">
-		                                        <a href="{{page.slug}}.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 66%;" >
-		                                         Continua
-		                                        </a>
-		                                        <a href="{{page.slug}}.html" class="btn btn-success btn 	d-block d-sm-none mt-4"  style="width: 66%;margin: auto;">
-		                                          Continua
-		                                        </a>
-
-
-		                                    </div>
-		                                </div>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-						{% set a = a + 1%}
-							{% endif  %}
-						{% endfor %}
+							
 						
 							{% for type in page.tags %}
 							{% if type.name=="Casseforti Intelligenti" %}
@@ -173,7 +128,52 @@
 						{% set a = a + 1%}
 							{% endif  %}
 						{% endfor %}
-						
+							{% for type in page.tags %}
+							{% if type.name=="valori" %}
+		                <div class="carousel-item {% if a==0 %} active {% endif %} ">
+		                    <div class="page-header header-filter" filter-color="primary"  style="background-image: url('{{page.feature_image}}');">
+		                        <div class="container">
+		                            <div class="row">
+		                                <div class="col-md-6 text-left">
+
+		                                    <h2 class="title  ">
+												{% for icon in page.tags %}
+													{% if icon.name=="vigilanza" %}
+													<i class="icon-vigilanza"></i>
+													{% endif  %}
+													
+													{% if icon.name=="Casseforti Intelligenti" %}
+													<i class="icon-valori"></i>
+													{% endif  %}
+													
+													{% if icon.name=="cybersecurity" %}
+													<i class="icon-cyber"></i>
+													{% endif  %}
+													
+													
+												{% endfor %}
+		                                  {{page.title}}</h2>
+
+		                                    <p class="title " style="font-weight:500">{{page.excerpt}}</p>
+
+		                                    <div class="buttons pt-4 ">
+		                                        <a href="{{page.slug}}.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 66%;" >
+		                                         Continua
+		                                        </a>
+		                                        <a href="{{page.slug}}.html" class="btn btn-success btn 	d-block d-sm-none mt-4"  style="width: 66%;margin: auto;">
+		                                          Continua
+		                                        </a>
+
+
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+						{% set a = a + 1%}
+							{% endif  %}
+						{% endfor %}
 					
 						
 						
