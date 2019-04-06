@@ -15066,6 +15066,9 @@ thead.thead-inverse th,
   width: 100% !important;
   height: auto !important; }
 
+.kg-image-card img {
+  width: 100% !important; }
+
 /*       Fix bug for IE      */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .rotating-card-container .card .front,
