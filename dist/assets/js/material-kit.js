@@ -16,6 +16,36 @@ var big_image;
 $(document).ready(function() {
     $(function(){
   
+		$("#clientisel").flexisel({
+		    visibleItems: 4,
+		    itemsToScroll: 3,
+		    animationSpeed: 1200,
+		    infinite: true,
+		    navigationTargetSelector: null,
+		    autoPlay: {
+		      enable: true,
+		      interval: 7000,
+		      pauseOnHover: true
+		    },
+		    responsiveBreakpoints: { 
+		      portrait: { 
+		        changePoint:480,
+		        visibleItems: 1,
+		        itemsToScroll: 1
+		      }, 
+		        landscape: { 
+		        changePoint:640,
+		        visibleItems: 2,
+		        itemsToScroll: 2
+		      },
+		        tablet: { 
+		        changePoint:768,
+		        visibleItems: 3,
+		        itemsToScroll: 3
+		      }
+		    }
+		  });
+  
         var $cat = $("#category1"),
             $subcat = $(".subcat");
   
@@ -182,9 +212,11 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
 
     // Active Carousel
-    $('.carousel').carousel({
+    $('#carouselExampleIndicators').carousel({
         interval: 17000
     });
+	
+    
 
     //Activate tags
     // we style the badges with our colors

@@ -1,6 +1,7 @@
 .nbs-flexisel-container {
     position:relative;
     max-width:100%;
+	margin-top:1em;
 }
 .nbs-flexisel-ul {
     position:relative;
@@ -23,9 +24,10 @@
     cursor:pointer;
     position:relative;
     line-height:0px;
+	height:100px
 }
 .nbs-flexisel-item img {
-    max-width: 100%;
+    max-width: 50%;
     cursor: pointer;
     position: relative;
     margin-top: 10px;
