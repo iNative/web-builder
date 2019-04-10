@@ -19,12 +19,12 @@ $(document).ready(function() {
 		$("#clientisel").flexisel({
 		    visibleItems: 4,
 		    itemsToScroll: 3,
-		    animationSpeed: 1200,
+		    animationSpeed: 750,
 		    infinite: true,
 		    navigationTargetSelector: null,
 		    autoPlay: {
 		      enable: true,
-		      interval: 7000,
+		      interval: 3500,
 		      pauseOnHover: true
 		    },
 		    responsiveBreakpoints: { 
@@ -213,7 +213,7 @@ $(document).ready(function() {
 
     // Active Carousel
     $('#carouselExampleIndicators').carousel({
-        interval: 17000
+        interval: 7000
     });
 	
     
