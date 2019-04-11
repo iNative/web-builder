@@ -16699,7 +16699,8 @@ select.selectpicker {
   text-align: justify; }
 
 .ghost-html ul li {
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  line-height: 2.9rem !important; }
 
 .contact-us .contact-content {
   padding-bottom: 40px;
