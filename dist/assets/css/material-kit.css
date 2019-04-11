@@ -16698,6 +16698,9 @@ select.selectpicker {
 .ghost-html p {
   text-align: justify; }
 
+.ghost-html ul li {
+  font-size: 1.3rem; }
+
 .contact-us .contact-content {
   padding-bottom: 40px;
   padding-top: 40px; }
