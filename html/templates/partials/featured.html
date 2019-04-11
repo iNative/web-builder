@@ -131,12 +131,12 @@
 							{% for type in page.tags %}
 							{% if type.name=="valori" %}
 		                <div class="carousel-item {% if a==0 %} active {% endif %} ">
-		                    <div class="page-header header-filter" filter-color="primary"  style="background-image: url('{{page.feature_image}}');">
+		                    <div class="page-header header-filter" filter-color="white"  style="background-image: url('{{page.feature_image}}');">
 		                        <div class="container">
 		                            <div class="row">
 		                                <div class="col-md-6 text-left">
 
-		                                    <h2 class="title  ">
+		                                    <h2 class="title  text-primary">
 												{% for icon in page.tags %}
 													{% if icon.name=="vigilanza" %}
 													<i class="icon-vigilanza"></i>
@@ -154,7 +154,7 @@
 												{% endfor %}
 		                                  {{page.title}}</h2>
 
-		                                    <p class="title " style="font-weight:500">{{page.meta_description}}</p>
+		                                    <p class="title text-default" style="font-weight:500">{{page.meta_description}}</p>
 
 		                                    <div class="buttons pt-4 ">
 		                                        <a href="{{page.slug}}.html" class="btn btn-success   	d-none d-sm-block mt-4" style="width: 66%;" >
