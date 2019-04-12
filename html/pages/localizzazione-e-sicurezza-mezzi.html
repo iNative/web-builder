@@ -5,34 +5,77 @@
 
 						{% if page.slug == "localizzazione-e-sicurezza-mezzi" %}
 						<title>{{page.meta_title}}</title><meta name="description" content="{{page.meta_description}}">
-						<meta name="author" content="Sicurtransport S.p.A.">
-						
-							
-								
-							
-								
-							
-						
-						
-						
-						<meta property="og:url" content="https://www.sicurtransport.com/{{page.slug}}"><meta property="og:site_name" content="Sicurtransport.it">
-						    <meta property="og:type" content="website">
-						    <meta property="og:title" content="{{page.meta_title}}">
-						    <meta property="og:description" content="{{page.meta_description}}">
-						    
-						    <meta property="og:image" content="{{page.feature_image}}">
-							{% for tag in page.tags %}
-							<meta property="article:tag" content="{{tag.name}}">
-							{% endfor %}
-						    
-						   
+						    <meta name="HandheldFriendly" content="True" />
+						    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+						    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=f476e00f65" />
+
+						    <meta name="description" content="{{page.meta_description}}" />
+						    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+						    <link rel="canonical" href="https://nuovo.sicurtransport.com/static" />
+						    <meta name="referrer" content="no-referrer-when-downgrade" />
     
-						 
-						    <meta name="twitter:card" content="summary_large_image">
-						    <meta name="twitter:title" content="{{page.meta_title}}">
-						    <meta name="twitter:description" content="{{page.meta_description}}">
-						    <meta name="twitter:url" content="https://www.sicurtransport.com/{{page.slug}}">
-						    <meta name="twitter:image" content="{{page.feature_image}}">
+						    <meta property="og:site_name" content="Sicurtransport.it" />
+						    <meta property="og:type" content="article" />
+						    <meta property="og:title" content="{{page.meta_title}}" />
+						    <meta property="og:description" content="{{page.meta_description}}" />
+						    
+							<meta property="og:url" content="https://nuovo.sicurtransport.com/{{page.slug}}">
+							
+							<meta property="og:image" content="{{page.feature_image}}">
+						   
+						
+						{% for tag in page.tags %}
+						<meta property="article:tag" content="{{tag.name}}">
+						{% endfor %}
+    
+						    <meta property="article:publisher" content="https://www.facebook.com/sicurtransport" />
+						    <meta name="twitter:card" content="summary_large_image" />
+					    <meta name="twitter:title" content="{{page.meta_title}}">
+					    <meta name="twitter:description" content="{{page.meta_description}}">
+					    <meta name="twitter:url" content="https://nuovo.sicurtransport.com/{{page.slug}}">
+					    <meta name="twitter:image" content="{{page.feature_image}}">
+						
+						
+						    <meta name="twitter:label1" content="Written by" />
+						    <meta name="twitter:data1" content="Sicurtransport" />
+						    <meta name="twitter:label2" content="Filed under" />
+							
+						    <meta name="twitter:data2" content="{% for tag in page.tags %}{{tag.name}},{% endfor %}" />
+						    <meta name="twitter:site" content="@sicurtransport" />
+						    <meta property="og:image:width" content="1752" />
+						    <meta property="og:image:height" content="842" />
+    
+						    <script type="application/ld+json">
+						{
+						    "@context": "https://schema.org",
+						    "@type": "Article",
+						    "publisher": {
+						        "@type": "Organization",
+						        "name": "Sicurtransport CMS",
+						        "logo": "https://cms.sicurtransport.com/content/images/2019/03/logo-w.png"
+						    },
+						    "author": {
+						        "@type": "Person",
+						        "name": "Webmaster",
+						        "sameAs": []
+						    },
+						    "headline": "{{page.meta_title}}",
+						    "url": "https://nuovo.sicurtransport.com/{{page.slug}}",
+						    "image": {
+						        "@type": "ImageObject",
+						        "url": "{{page.feature_image}}",
+						        "width": 1752,
+						        "height": 842
+						    },
+						    "keywords": "{% for tag in page.tags %}{{tag.name}},{% endfor %}",
+						    "description": "{{page.meta_description}}",
+						    "mainEntityOfPage": {
+						        "@type": "WebPage",
+						        "@id": "https://nuovo.sicurtransport.com/"
+						    }
+						}
+						    </script>
 						    
 					
 						  
