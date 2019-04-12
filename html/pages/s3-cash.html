@@ -102,6 +102,7 @@
 
 {% if page.slug == "s3-cash" %}
 
+	
 
 	  
  <div class="page-header header-filter header-small  " filter-color="white" data-parallax="true" style="background-image: url({{page.feature_image}});">
@@ -109,7 +110,28 @@
          <div class="row">
              <div class="col-md-8 ml-auto mr-auto text-center">
                   <h1 class="title text-primary">{{page.title}}</h2>
-					 <a  href="/richiesta.html?bg={{page.feature_image}}&service={{page.slug}}" class="btn btn-success" >RICHIEDI IL SERVIZIO</a>
+				  	{% for tag in page.tags %}	
+				  		{% if tag.name == "valori" %}
+							<a  href="/richiesta.html?bg={{page.feature_image}}&service={{page.slug}}&area={{tag.name}}" class="btn btn-success" >RICHIEDI IL SERVIZIO</a>
+				  		{% endif  %}
+		
+				  		{% if tag.name == "vigilanza" %}
+							<a  href="/richiesta.html?bg={{page.feature_image}}&service={{page.slug}}&area={{tag.name}}" class="btn btn-success" >RICHIEDI IL SERVIZIO</a>
+		
+				  		{% endif  %}
+		
+				  		{% if tag.name == "cybersecurity" %}
+							<a  href="/richiesta.html?bg={{page.feature_image}}&service={{page.slug}}&area={{tag.name}}" class="btn btn-success" >RICHIEDI IL SERVIZIO</a>
+		
+				  		{% endif  %}
+		
+				  		{% if tag.name == "Casseforti Intelligenti" %}
+							<a  href="/richiesta.html?bg={{page.feature_image}}&service={{page.slug}}&area={{tag.name}}" class="btn btn-success" >RICHIEDI IL SERVIZIO</a>
+		
+				  		{% endif  %}
+	
+				  	{% endfor  %} 
+					 
                  
              </div>
          </div>
