@@ -89,6 +89,15 @@
 	};
 	
 	docReady(function() {
+		if(getUrlParameter('area')=="Casseforti Intelligenti") {
+			var element = document.getElementById("contact-form-privati");
+			  element.classList.remove("d-none");
+			
+		}
+		
+		
+		
+		
 		var el = document.getElementById("page-header"); 
 		var bg = getUrlParameter('bg');
 		var service = getUrlParameter('service');
