@@ -45,40 +45,12 @@ $(document).ready(function() {
 		      }
 		    }
 		  });
-  
-        var $cat = $("#category1"),
-            $subcat = $(".subcat");
-  
-        var optgroups = {};
-  
-        $subcat.each(function(i,v){
-        	var $e = $(v);
-        	var _id = $e.attr("id");
-    			optgroups[_id] = {};
-    			$e.find("optgroup").each(function(){
-          	var _r = $(this).data("rel");
-            $(this).find("option").addClass("is-dyn");
-          	optgroups[_id][_r] = $(this).html();
-    			});
-        });
-        $subcat.find("optgroup").remove();
-  
-        var _lastRel;
-        $cat.on("change",function(){
-            var _rel = $(this).val();
-            if(_lastRel === _rel) return true;
-            _lastRel = _rel;
-            $subcat.find("option").attr("style","");
-            $subcat.val("");
-            $subcat.find(".is-dyn").remove();
-            if(!_rel) return $subcat.prop("disabled",true);
-            $subcat.each(function(){
-            	var $el = $(this);
-              var _id = $el.attr("id");
-              $el.append(optgroups[_id][_rel]);
-            });
-            $subcat.prop("disabled",false);
-        });
+  ///////////////// CAT 1/////////////////////
+       
+		
+
+	  
+	  
   
     });
 	
@@ -86,8 +58,13 @@ $(document).ready(function() {
 	
     $(function(){
   
-        var $cat = $("#category1_"),
-            $subcat = $(".subcat_");
+  
+  
+  ////////_CAT
+		
+		
+        var $cat = $("#regione1privati"),
+            $subcat = $(".provincia1privati");
   
         var optgroups = {};
   
@@ -119,9 +96,293 @@ $(document).ready(function() {
             });
             $subcat.prop("disabled",false);
         });
+		
+		
+/////// 
+		
+		var $cat2 = $("#regione1azienda"),
+		$subcat2 = $(".provincia1azienda");
+
+		var optgroups2 = {};
+
+		$subcat2.each(function(i,v){
+			var $e = $(v);
+			var _id = $e.attr("id");
+			optgroups2[_id] = {};
+			$e.find("optgroup").each(function(){
+				var _r = $(this).data("rel");
+				$(this).find("option").addClass("is-dyn");
+				optgroups2[_id][_r] = $(this).html();
+			});
+		});
+		$subcat2.find("optgroup").remove();
+
+		var _lastRel2;
+		$cat2.on("change",function(){
+			var _rel2 = $(this).val();
+			if(_lastRel2 === _rel2) return true;
+			_lastRel2 = _rel2;
+			$subcat2.find("option").attr("style","");
+			$subcat2.val("");
+			$subcat2.find(".is-dyn").remove();
+			if(!_rel2) return $subcat2.prop("disabled",true);
+			$subcat2.each(function(){
+				var $el = $(this);
+				var _id = $el.attr("id");
+				$el.append(optgroups2[_id][_rel2]);
+			});
+			$subcat2.prop("disabled",false);
+		});
   
     });
 	
+	
+    $(function(){
+  
+  
+  
+  ////////_CAT
+		
+		
+        var $cat = $("#regione2privati"),
+            $subcat = $(".provincia2privati");
+  
+        var optgroups = {};
+  
+        $subcat.each(function(i,v){
+        	var $e = $(v);
+        	var _id = $e.attr("id");
+    			optgroups[_id] = {};
+    			$e.find("optgroup").each(function(){
+          	var _r = $(this).data("rel");
+            $(this).find("option").addClass("is-dyn");
+          	optgroups[_id][_r] = $(this).html();
+    			});
+        });
+        $subcat.find("optgroup").remove();
+  
+        var _lastRel;
+        $cat.on("change",function(){
+            var _rel = $(this).val();
+            if(_lastRel === _rel) return true;
+            _lastRel = _rel;
+            $subcat.find("option").attr("style","");
+            $subcat.val("");
+            $subcat.find(".is-dyn").remove();
+            if(!_rel) return $subcat.prop("disabled",true);
+            $subcat.each(function(){
+            	var $el = $(this);
+              var _id = $el.attr("id");
+              $el.append(optgroups[_id][_rel]);
+            });
+            $subcat.prop("disabled",false);
+        });
+		
+		
+/////// 
+		
+		var $cat2 = $("#regione2azienda"),
+		$subcat2 = $(".provincia2azienda");
+
+		var optgroups2 = {};
+
+		$subcat2.each(function(i,v){
+			var $e = $(v);
+			var _id = $e.attr("id");
+			optgroups2[_id] = {};
+			$e.find("optgroup").each(function(){
+				var _r = $(this).data("rel");
+				$(this).find("option").addClass("is-dyn");
+				optgroups2[_id][_r] = $(this).html();
+			});
+		});
+		$subcat2.find("optgroup").remove();
+
+		var _lastRel2;
+		$cat2.on("change",function(){
+			var _rel2 = $(this).val();
+			if(_lastRel2 === _rel2) return true;
+			_lastRel2 = _rel2;
+			$subcat2.find("option").attr("style","");
+			$subcat2.val("");
+			$subcat2.find(".is-dyn").remove();
+			if(!_rel2) return $subcat2.prop("disabled",true);
+			$subcat2.each(function(){
+				var $el = $(this);
+				var _id = $el.attr("id");
+				$el.append(optgroups2[_id][_rel2]);
+			});
+			$subcat2.prop("disabled",false);
+		});
+  
+    });
+	
+
+
+    $(function(){
+  
+  
+  
+  ////////_CAT
+		
+		
+        var $cat = $("#regione3privati"),
+            $subcat = $(".provincia3privati");
+  
+        var optgroups = {};
+  
+        $subcat.each(function(i,v){
+        	var $e = $(v);
+        	var _id = $e.attr("id");
+    			optgroups[_id] = {};
+    			$e.find("optgroup").each(function(){
+          	var _r = $(this).data("rel");
+            $(this).find("option").addClass("is-dyn");
+          	optgroups[_id][_r] = $(this).html();
+    			});
+        });
+        $subcat.find("optgroup").remove();
+  
+        var _lastRel;
+        $cat.on("change",function(){
+            var _rel = $(this).val();
+            if(_lastRel === _rel) return true;
+            _lastRel = _rel;
+            $subcat.find("option").attr("style","");
+            $subcat.val("");
+            $subcat.find(".is-dyn").remove();
+            if(!_rel) return $subcat.prop("disabled",true);
+            $subcat.each(function(){
+            	var $el = $(this);
+              var _id = $el.attr("id");
+              $el.append(optgroups[_id][_rel]);
+            });
+            $subcat.prop("disabled",false);
+        });
+		
+		
+/////// 
+		
+		var $cat2 = $("#regione3azienda"),
+		$subcat2 = $(".provincia3azienda");
+
+		var optgroups2 = {};
+
+		$subcat2.each(function(i,v){
+			var $e = $(v);
+			var _id = $e.attr("id");
+			optgroups2[_id] = {};
+			$e.find("optgroup").each(function(){
+				var _r = $(this).data("rel");
+				$(this).find("option").addClass("is-dyn");
+				optgroups2[_id][_r] = $(this).html();
+			});
+		});
+		$subcat2.find("optgroup").remove();
+
+		var _lastRel2;
+		$cat2.on("change",function(){
+			var _rel2 = $(this).val();
+			if(_lastRel2 === _rel2) return true;
+			_lastRel2 = _rel2;
+			$subcat2.find("option").attr("style","");
+			$subcat2.val("");
+			$subcat2.find(".is-dyn").remove();
+			if(!_rel2) return $subcat2.prop("disabled",true);
+			$subcat2.each(function(){
+				var $el = $(this);
+				var _id = $el.attr("id");
+				$el.append(optgroups2[_id][_rel2]);
+			});
+			$subcat2.prop("disabled",false);
+		});
+  
+    });
+	
+	
+    $(function(){
+  
+  
+  
+  ////////_CAT
+		
+		
+        var $cat = $("#regione4privati"),
+            $subcat = $(".provincia4privati");
+  
+        var optgroups = {};
+  
+        $subcat.each(function(i,v){
+        	var $e = $(v);
+        	var _id = $e.attr("id");
+    			optgroups[_id] = {};
+    			$e.find("optgroup").each(function(){
+          	var _r = $(this).data("rel");
+            $(this).find("option").addClass("is-dyn");
+          	optgroups[_id][_r] = $(this).html();
+    			});
+        });
+        $subcat.find("optgroup").remove();
+  
+        var _lastRel;
+        $cat.on("change",function(){
+            var _rel = $(this).val();
+            if(_lastRel === _rel) return true;
+            _lastRel = _rel;
+            $subcat.find("option").attr("style","");
+            $subcat.val("");
+            $subcat.find(".is-dyn").remove();
+            if(!_rel) return $subcat.prop("disabled",true);
+            $subcat.each(function(){
+            	var $el = $(this);
+              var _id = $el.attr("id");
+              $el.append(optgroups[_id][_rel]);
+            });
+            $subcat.prop("disabled",false);
+        });
+		
+		
+/////// 
+		
+		var $cat2 = $("#regione4azienda"),
+		$subcat2 = $(".provincia4azienda");
+
+		var optgroups2 = {};
+
+		$subcat2.each(function(i,v){
+			var $e = $(v);
+			var _id = $e.attr("id");
+			optgroups2[_id] = {};
+			$e.find("optgroup").each(function(){
+				var _r = $(this).data("rel");
+				$(this).find("option").addClass("is-dyn");
+				optgroups2[_id][_r] = $(this).html();
+			});
+		});
+		$subcat2.find("optgroup").remove();
+
+		var _lastRel2;
+		$cat2.on("change",function(){
+			var _rel2 = $(this).val();
+			if(_lastRel2 === _rel2) return true;
+			_lastRel2 = _rel2;
+			$subcat2.find("option").attr("style","");
+			$subcat2.val("");
+			$subcat2.find(".is-dyn").remove();
+			if(!_rel2) return $subcat2.prop("disabled",true);
+			$subcat2.each(function(){
+				var $el = $(this);
+				var _id = $el.attr("id");
+				$el.append(optgroups2[_id][_rel2]);
+			});
+			$subcat2.prop("disabled",false);
+		});
+  
+    });
+	
+	
+	
+		
 	
 	
 	
